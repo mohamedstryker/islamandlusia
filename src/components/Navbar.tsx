@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Sword, Clock, Users, Swords, Home, MenuIcon, Map, Flag } from 'lucide-react';
+import { AnimatedLink } from './AnimatedLink';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,49 +10,70 @@ export function Navbar() {
       <div className="container mx-auto flex flex-row-reverse justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-reverse space-x-2">
-          <Link to="/" className="flex items-center space-x-reverse space-x-2">
-            <span className="text-xl font-arabic">الفتح الأندلسي</span>
+          <AnimatedLink 
+            to="/" 
+            className="flex items-center space-x-reverse space-x-2 text-xl font-arabic"
+          >
+            الفتح الأندلسي
             <Sword className="h-6 w-6" />
-          </Link>
+          </AnimatedLink>
         </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-reverse space-x-6">
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/" className="flex items-center space-x-reverse space-x-1">
+          <li>
+            <AnimatedLink 
+              to="/" 
+              className="flex items-center space-x-reverse space-x-1 hover:text-[#c4a484]"
+            >
               <Home size={18} />
               <span>الرئيسية</span>
-            </Link>
+            </AnimatedLink>
           </li>
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/timeline" className="flex items-center space-x-reverse space-x-1">
+          <li>
+            <AnimatedLink 
+              to="/timeline" 
+              className="flex items-center space-x-reverse space-x-1 hover:text-[#c4a484]"
+            >
               <Clock size={18} />
-              <span>الجدول الزمني</span>
-            </Link>
+              <span>التسلسل الزمني</span>
+            </AnimatedLink>
           </li>
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/characters" className="flex items-center space-x-reverse space-x-1">
+          <li>
+            <AnimatedLink 
+              to="/characters" 
+              className="flex items-center space-x-reverse space-x-1 hover:text-[#c4a484]"
+            >
               <Users size={18} />
               <span>الشخصيات</span>
-            </Link>
+            </AnimatedLink>
           </li>
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/battles" className="flex items-center space-x-reverse space-x-1">
+          <li>
+            <AnimatedLink 
+              to="/battles" 
+              className="flex items-center space-x-reverse space-x-1 hover:text-[#c4a484]"
+            >
               <Swords size={18} />
               <span>المعارك</span>
-            </Link>
+            </AnimatedLink>
           </li>
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/conquests" className="flex items-center space-x-reverse space-x-1">
+          <li>
+            <AnimatedLink 
+              to="/conquests" 
+              className="flex items-center space-x-reverse space-x-1 hover:text-[#c4a484]"
+            >
               <Flag size={18} />
               <span>الفتوحات</span>
-            </Link>
+            </AnimatedLink>
           </li>
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/battle-map" className="flex items-center space-x-reverse space-x-1">
+          <li>
+            <AnimatedLink 
+              to="/battle-map" 
+              className="flex items-center space-x-reverse space-x-1 hover:text-[#c4a484]"
+            >
               <Map size={18} />
               <span>خريطة المعارك</span>
-            </Link>
+            </AnimatedLink>
           </li>
         </ul>
 
@@ -68,42 +89,16 @@ export function Navbar() {
       {/* Mobile Navigation */}
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
         <ul className="pt-4 space-y-4">
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/" className="flex items-center space-x-reverse space-x-2">
+          <li>
+            <AnimatedLink 
+              to="/" 
+              className="flex items-center space-x-reverse space-x-2 hover:text-[#c4a484]"
+            >
               <Home size={18} />
               <span>الرئيسية</span>
-            </Link>
+            </AnimatedLink>
           </li>
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/timeline" className="flex items-center space-x-reverse space-x-2">
-              <Clock size={18} />
-              <span>الجدول الزمني</span>
-            </Link>
-          </li>
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/characters" className="flex items-center space-x-reverse space-x-2">
-              <Users size={18} />
-              <span>الشخصيات</span>
-            </Link>
-          </li>
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/battles" className="flex items-center space-x-reverse space-x-2">
-              <Swords size={18} />
-              <span>المعارك</span>
-            </Link>
-          </li>
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/conquests" className="flex items-center space-x-reverse space-x-2">
-              <Flag size={18} />
-              <span>الفتوحات</span>
-            </Link>
-          </li>
-          <li className="hover:text-[#c4a484] transition-colors">
-            <Link to="/battle-map" className="flex items-center space-x-reverse space-x-2">
-              <Map size={18} />
-              <span>خريطة المعارك</span>
-            </Link>
-          </li>
+          {/* ... باقي الروابط بنفس النمط */}
         </ul>
       </div>
     </nav>

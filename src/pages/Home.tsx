@@ -1,5 +1,6 @@
 import React from 'react';
 import { Clock, Users, Swords } from 'lucide-react';
+import { Link } from 'react-router-dom';  // استيراد Link
 
 export function Home() {
   return (
@@ -8,7 +9,7 @@ export function Home() {
       <div className="relative pt-16">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1585108718981-630868060f8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80"
+            src="	https://www.diwanarch.com/wp-content/uploads/2018/07/mosque-poster.jpg?ixlib=rb-1.2.1&auto=format&fit=fill&w=295450&q=900 "
             alt="عمارة المسجد"
             className="w-full h-screen object-cover"
           />
@@ -24,12 +25,16 @@ export function Home() {
             حيث أنشأت عصراً ذهبياً من المعرفة والفن والتبادل الثقافي استمر لقرون.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-[#c4a484] text-white px-8 py-3 rounded-lg hover:bg-[#a88a6c] transition-colors font-arabic">
-              استكشف الجدول الزمني
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-[#2c1810] transition-colors font-arabic">
-              الشخصيات الرئيسية
-            </button>
+            <Link to="/timeline">
+              <button className="bg-[#c4a484] text-white px-8 py-3 rounded-lg hover:bg-[#a88a6c] transition-colors font-arabic">
+                استكشف الجدول الزمني
+              </button>
+            </Link>
+            <Link to="/characters">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-[#2c1810] transition-colors font-arabic">
+                الشخصيات الرئيسية
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export const charactersByPeriod = {
       role: "القائد ابن القائد",
       period: "فتح الأندلس",
       date: "19-97 هـ = 640-716 م",
-      image: "https://images.unsplash.com/photo-1583592643761-bf2ecd0e0c82?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqLxl7iCgVjMjI4tAM3KOQqyVJA0It8f4MLw&s",
       description: "القائد العسكري الذي خطط للفتح وأشرف على عملياته. قام بتوحيد المناطق المفتوحة وتنظيم إدارتها."
     },
     {
@@ -34,7 +34,7 @@ export const charactersByPeriod = {
       role: "والي الأندلس",
       period: "فتح الأندلس",
       date: "95-97 هـ = 714-716 م",
-      image: "https://images.unsplash.com/photo-1566624790190-511a09f6ddbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-15666247590190-511a09f6ddbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "أول والٍ للأندلس، عمل على استقرار الحكم الإسلامي وتنظيم شؤون البلاد."
     },
     {
@@ -51,7 +51,7 @@ export const charactersByPeriod = {
       name: "عبدالرحمن بن عبدالله الغافقي",
       role: "القائد العسكري",
       period: "فتح الأندلس",
-      image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-10567427017947-545c5f8d16ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "قائد عسكري شجاع قاد العديد من المعارك في الأندلس."
     },
     {
